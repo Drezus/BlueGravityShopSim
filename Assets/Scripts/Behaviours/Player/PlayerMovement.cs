@@ -8,6 +8,9 @@ namespace Behaviours.Player
     {
         private Rigidbody2D rbody;
 
+        [SerializeField]
+        private Animator anim;
+
         [Header("Analog Movement")]
         [SerializeField]
         private float speed = 5;
@@ -18,6 +21,9 @@ namespace Behaviours.Player
 
         [SerializeField]
         private string verAxis = "Vertical";
+        
+        public float Horizontal => Input.GetAxis(horAxis);
+        public float Vertical => Input.GetAxis(verAxis);
 
         private void Awake()
         {
@@ -26,12 +32,7 @@ namespace Behaviours.Player
 
         private void FixedUpdate()
         {
-            float hor = Input.GetAxis(horAxis);
-            float ver = Input.GetAxis(verAxis);
-
-            Vector2 dir = new(hor, ver);
-
-            if (dir.magnitude <= 0) return;
+            Vector2 dir = new(Horizontal, Vertical);
 
             Vector2 pos = transform.position;
             rbody.MovePosition(pos + dir * (Time.deltaTime * speed));
