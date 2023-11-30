@@ -14,19 +14,17 @@ namespace Behaviours.Player
         public string walkLabel = "Walking";
         public string directionLabel = "Direction";
 
-        private Directions lastDir = 0;
+        [HideInInspector] public Directions lastDir = 0;
 
         // Update is called once per frame
         void Update()
         {
             anim.SetFloat(horizontalLabel, playerMov.Horizontal);
             anim.SetFloat(verticalLabel, playerMov.Vertical);
-
-            bool moving = Mathf.Abs(playerMov.Horizontal) > 0 || Mathf.Abs(playerMov.Vertical) > 0;
             
-            anim.SetBool(walkLabel, moving);
+            anim.SetBool(walkLabel, playerMov.moving);
 
-            if (!moving) return;
+            if (!playerMov.moving) return;
             
             //Sets a last direction value so the Idle animation can use it regardless of input states.
             if (Mathf.Abs(playerMov.Horizontal) > Mathf.Abs(playerMov.Vertical))

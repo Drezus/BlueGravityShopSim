@@ -6,6 +6,9 @@ namespace Behaviours.Player
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerMovement : MonoBehaviour
     {
+        private const string horAxis = "Horizontal";
+        private const string verAxis = "Vertical";
+        
         private Rigidbody2D rbody;
 
         [SerializeField]
@@ -14,22 +17,21 @@ namespace Behaviours.Player
         [Header("Analog Movement")]
         [SerializeField]
         private float speed = 5;
-
-        [Header("Axis Labels")]
-        [SerializeField]
-        private string horAxis = "Horizontal";
-
-        [SerializeField]
-        private string verAxis = "Vertical";
         
-        public float Horizontal => Input.GetAxis(horAxis);
+        public float Horizontal => Input.GetAxis(horAxis); 
         public float Vertical => Input.GetAxis(verAxis);
+        public bool moving;
 
         private void Awake()
         {
             rbody = GetComponent<Rigidbody2D>();
         }
 
+        private void Update()
+        {
+            moving = Mathf.Abs(Horizontal) > 0 || Mathf.Abs(Vertical) > 0;
+        }
+        
         private void FixedUpdate()
         {
             Vector2 dir = new(Horizontal, Vertical);

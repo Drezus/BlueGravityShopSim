@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188409920d0d54dc484fbc2f908f563b, type: 3}
+  m_Name: T-Shirt
+  m_EditorClassIdentifier: 
+  title: T-Shirt
+  desc: Can't get any more basic than this.
+  category: 2
+  icon: {fileID: 0}
+  colors:
+  - {r: 0.8396226, g: 0.7819294, b: 0, a: 1}
+  - {r: 0.8962264, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0.39823872, b: 0.8584906, a: 1}
+  - {r: 0.06695303, g: 0.6415094, b: 0, a: 1}
+  purchasedColors: 
+  idleFrames:
+  - direction: 0
+    frames:
+    - {fileID: 14670305, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+    - {fileID: 1246062351, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: 297274437, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+    - {fileID: 828880408, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: -1227619076, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+    - {fileID: -334626458, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: -1397628760, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+    - {fileID: 1133194224, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+  walkFrames:
+  - direction: 0
+    frames:
+    - {fileID: 14670305, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+    - {fileID: -1034326882, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+    - {fileID: -17950080, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: 297274437, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+    - {fileID: 1455527577, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+    - {fileID: 1114757076, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: -1227619076, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+    - {fileID: -367519842, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+    - {fileID: 791529463, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: -1397628760, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+    - {fileID: -365479837, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
+    - {fileID: -2023540808, guid: 37239d5f22e9b4cf386348d69a3bbb25, type: 3}
