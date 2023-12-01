@@ -8,6 +8,7 @@ namespace ScriptableObjects.Clothing
     [CreateAssetMenu(fileName = "NewClothingItem", menuName = "Blue Gravity/New Clothing Item...")]
     public class ClothingItem : ScriptableObject
     {
+        public int id;
         public string title;
         public string desc;
         public ClothingCategory category;

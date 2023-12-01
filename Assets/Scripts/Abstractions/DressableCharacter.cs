@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Behaviours.Player;
 using ScriptableObjects.Clothing;
 using UnityEngine;
 
 public class DressableCharacter : MonoBehaviour
 {
+    private List<ClothingItem> inventory;
+    
     [Header("Equipped Clothing")]
     public ClothingItem hat;
     public ClothingItem face;
@@ -24,7 +27,49 @@ public class DressableCharacter : MonoBehaviour
     [Header("AnimationController Reference")]
     [SerializeField] private PlayerAnimationController animController;
 
-    public void SetColor(ClothingCategory cat, int colorIndex)
+    private void Awake()
+    {
+        SetColor(ClothingCategory.Torso, 0);
+    }
+
+    public void PurchaseClothing(ClothingItem item, int colorIndex)
+    {
+        ClothingItem itemAlreadyBought = inventory.FirstOrDefault(i => i.id == item.id);
+        if (itemAlreadyBought == null)
+        {
+            inventory.Add(item);
+            itemAlreadyBought = item;
+        }
+        
+        if(!itemAlreadyBought.purchasedColors.Contains(colorIndex)) 
+            itemAlreadyBought.purchasedColors.Add(colorIndex);
+        
+        //Equip instantly
+        switch (item.category)
+        {
+            case ClothingCategory.Hat:
+                hat = item;
+                break;
+            case ClothingCategory.Face:
+                face = item;
+                break;
+            case ClothingCategory.Torso:
+                torso = item;
+                break;
+            case ClothingCategory.Legs:
+                legs = item;
+                break;
+            case ClothingCategory.Feet:
+                feet = item;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(item.category), item.category, "Invalid item category.");
+        }
+        
+        SetColor(item.category, colorIndex);
+    }
+    
+    private void SetColor(ClothingCategory cat, int colorIndex)
     {
         switch (cat)
         {
