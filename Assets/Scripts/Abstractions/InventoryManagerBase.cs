@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using ScriptableObjects.Clothing;
+using TMPro;
 using UI.Inventory;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +18,12 @@ namespace Abstractions
         
         [SerializeField]
         protected Transform grid;
+        
+        [Header("Labels")]
+        [SerializeField]
+        protected TMP_Text itemNameLabel;
+        [SerializeField]
+        protected TMP_Text itemDescLabel;
         
         [Header("Reference to Full-body art layers")]
         public Image hatLayer;
@@ -43,6 +50,9 @@ namespace Abstractions
             }
             
             ShowEquippedItems();
+
+            itemNameLabel.text = string.Empty;
+            itemDescLabel.text = string.Empty;
         }
 
         protected void SetupGrid(DressableCharacter dressableChar = null)
@@ -59,12 +69,14 @@ namespace Abstractions
 
             OnItemClicked += SelectItem;
             OnItemClicked += SetFullBodyArt;
+            OnItemClicked += SetText;
         }
 
         private void OnDestroy()
         {
             OnItemClicked -= SelectItem;
             OnItemClicked -= SetFullBodyArt;
+            OnItemClicked -= SetText;
         }
 
         protected abstract void SelectItem(ClothingItem item, int colorID);
@@ -86,6 +98,12 @@ namespace Abstractions
             targetImg.sprite = item.fullBodyArt;
             targetImg.gameObject.SetActive(targetImg.sprite != null);
             targetImg.color = item.colors[colorID];
+        }
+
+        private void SetText(ClothingItem item, int colorID)
+        {
+            itemNameLabel.text = item.title;
+            itemDescLabel.text = item.desc;
         }
 
         private void ShowEquippedItems()
