@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188409920d0d54dc484fbc2f908f563b, type: 3}
+  m_Name: Cropped
+  m_EditorClassIdentifier: 
+  id: 4
+  title: Cropped
+  desc: Belly buttons are meant to be shown
+  category: 2
+  price: 15
+  resellPrice: 5
+  thumbnailIcon: {fileID: 21300000, guid: 26471660c1e8c4178b3339b8f757578f, type: 3}
+  fullBodyArt: {fileID: 21300000, guid: 3b906ec79d2a747e9ac2308c265c883b, type: 3}
+  colors:
+  - {r: 0.6320754, g: 0, b: 0.4538699, a: 1}
+  - {r: 0.8962264, g: 0.47757757, b: 0, a: 1}
+  - {r: 0.43244925, g: 0.8113208, b: 0.55336577, a: 1}
+  - {r: 0.4524209, g: 0.3537736, b: 1, a: 1}
+  - {r: 0.8207547, g: 0.75703716, b: 0.60008013, a: 1}
+  purchasedColors: 
+  idleFrames:
+  - direction: 0
+    frames:
+    - {fileID: 662653542, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+    - {fileID: 1057337625, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: -841733279, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+    - {fileID: 1616354999, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: -1819254898, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+    - {fileID: -683189504, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: 1569456956, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+    - {fileID: 1859947606, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+  walkFrames:
+  - direction: 0
+    frames:
+    - {fileID: 662653542, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+    - {fileID: -388233583, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+    - {fileID: -356002005, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: -841733279, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+    - {fileID: -1921278655, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+    - {fileID: 2121366254, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: -1819254898, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+    - {fileID: -1925217000, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+    - {fileID: 1594039925, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: 1569456956, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+    - {fileID: -1227438626, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}
+    - {fileID: -1744480768, guid: 1e7dfcc8f7ce24ce8aa7ece1fe2f3c7e, type: 3}

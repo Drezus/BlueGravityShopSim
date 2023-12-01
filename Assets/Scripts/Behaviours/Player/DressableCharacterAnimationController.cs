@@ -15,9 +15,8 @@ namespace Behaviours.Player
         public string directionLabel = "Direction";
 
         [HideInInspector] public Directions lastDir = 0;
-
-        // Update is called once per frame
-        void Update()
+        
+        void LateUpdate()
         {
             anim.SetFloat(horizontalLabel, characterMov.Horizontal);
             anim.SetFloat(verticalLabel, characterMov.Vertical);
