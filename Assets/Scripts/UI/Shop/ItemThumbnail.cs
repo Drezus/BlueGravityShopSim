@@ -33,8 +33,11 @@ namespace UI.Shop
 
         public void Setup(ClothingItem item, ShopManager manager)
         {
+            thisItem = item;
             itemIcon.sprite = item.icon;
             currentColor = 0;
+
+            RecolorIcon();
             
             if (colorButtonsParent.childCount > 0)
             {
@@ -45,19 +48,25 @@ namespace UI.Shop
                 }    
             }
 
-            foreach (Color col in item.colors)
+            foreach (Color col in thisItem.colors)
             {
                 Button colorBtn = Instantiate(colorButtonPrefab, colorButtonsParent);
                 colorBtn.GetComponent<Image>().color = col;
                 colorBtn.GetComponent<Button>().onClick.AddListener(() =>
                 {
-                    currentColor = item.colors.IndexOf(col);
-                    manager.OnItemClicked?.Invoke(item, currentColor);
+                    currentColor = thisItem.colors.IndexOf(col);
+                    manager.OnItemClicked?.Invoke(thisItem, currentColor);
+                    RecolorIcon();
                 });
             }
             
             btn.onClick.RemoveAllListeners();
-            btn.onClick.AddListener(() => manager.OnItemClicked?.Invoke(item, currentColor));
+            btn.onClick.AddListener(() => manager.OnItemClicked?.Invoke(thisItem, currentColor));
+        }
+
+        private void RecolorIcon()
+        {
+            itemIcon.color = thisItem.colors[currentColor];
         }
     }
 }

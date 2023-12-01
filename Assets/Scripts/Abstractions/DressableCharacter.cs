@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class DressableCharacter : MonoBehaviour
 {
+    public int coins;
     private List<ClothingItem> inventory;
     
     [Header("Equipped Clothing")]
@@ -29,7 +30,7 @@ public class DressableCharacter : MonoBehaviour
 
     private void Awake()
     {
-        SetColor(ClothingCategory.Torso, 0);
+        inventory = new List<ClothingItem>();
     }
 
     public void PurchaseClothing(ClothingItem item, int colorIndex)
@@ -67,6 +68,14 @@ public class DressableCharacter : MonoBehaviour
         }
         
         SetColor(item.category, colorIndex);
+
+        coins -= item.price;
+    }
+
+    public bool AlreadyPurchasedItem(ClothingItem item, int colorIndex)
+    {
+        ClothingItem itemAlreadyBought = inventory.FirstOrDefault(i => i.id == item.id);
+        return itemAlreadyBought != null && itemAlreadyBought.purchasedColors.Contains(colorIndex);
     }
     
     private void SetColor(ClothingCategory cat, int colorIndex)
