@@ -52,6 +52,7 @@ namespace Abstractions
             ClothingItem itemAlreadyBought = Inventory.FirstOrDefault(i => i.id == item.id);
             if (itemAlreadyBought == null)
             {
+                item.purchasedColors = new List<int>();
                 Inventory.Add(item);
                 itemAlreadyBought = item;
             }
