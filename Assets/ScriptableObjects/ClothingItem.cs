@@ -13,7 +13,8 @@ namespace ScriptableObjects.Clothing
         public string desc;
         public ClothingCategory category;
         public int price;
-        public Sprite icon;
+        public Sprite thumbnailIcon;
+        public Sprite fullBodyArt;
         public List<Color> colors;
 
         [HideInInspector]

@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 188409920d0d54dc484fbc2f908f563b, type: 3}
-  m_Name: Long Sleeves
+  m_Name: Tank Top
   m_EditorClassIdentifier: 
-  id: 2
-  title: Long Sleeves
-  desc: Some protection for those chilly afternoons
+  id: 1
+  title: Tank Top
+  desc: Show off those biceps
   category: 2
-  price: 12
-  icon: {fileID: 21300000, guid: a21018ba8a37a4c2892f5269b773d2ad, type: 3}
+  price: 8
+  thumbnailIcon: {fileID: 21300000, guid: b8323819d12724a398aed0d78a9e6f28, type: 3}
+  fullBodyArt: {fileID: 0}
   colors:
-  - {r: 0.12936097, g: 0.20815662, b: 0.4811321, a: 1}
-  - {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
-  - {r: 0.19401924, g: 0.3773585, b: 0.24998224, a: 1}
-  - {r: 0.6509434, g: 0.23170485, b: 0.21800464, a: 1}
-  - {r: 0.21960782, g: 0.4985606, b: 0.6509804, a: 1}
+  - {r: 0.21568628, g: 0.21568628, b: 0.21568628, a: 1}
+  - {r: 0.6320754, g: 0.25342646, b: 0.25342646, a: 1}
+  - {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
   purchasedColors: 
   idleFrames:
   - direction: 0

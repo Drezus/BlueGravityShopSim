@@ -1,10 +1,11 @@
-using System;
+
+using System.Collections.Generic;
+using Abstractions;
 using ScriptableObjects.Clothing;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.Shop
+namespace UI.Inventory
 {
     [RequireComponent(typeof(Button))]
     public class ItemThumbnail : MonoBehaviour
@@ -31,13 +32,10 @@ namespace UI.Shop
             btn = GetComponent<Button>();
         }
 
-        public void Setup(ClothingItem item, ShopManager manager)
+        public void Setup(ClothingItem item, InventoryManagerBase inventory, List<int> purchasedColors = null)
         {
             thisItem = item;
-            itemIcon.sprite = item.icon;
-            currentColor = 0;
-
-            RecolorIcon();
+            itemIcon.sprite = item.thumbnailIcon;
             
             if (colorButtonsParent.childCount > 0)
             {
@@ -50,18 +48,23 @@ namespace UI.Shop
 
             foreach (Color col in thisItem.colors)
             {
+                if (purchasedColors != null && !purchasedColors.Contains(thisItem.colors.IndexOf(col))) continue;
+                
                 Button colorBtn = Instantiate(colorButtonPrefab, colorButtonsParent);
                 colorBtn.GetComponent<Image>().color = col;
                 colorBtn.GetComponent<Button>().onClick.AddListener(() =>
                 {
                     currentColor = thisItem.colors.IndexOf(col);
-                    manager.OnItemClicked?.Invoke(thisItem, currentColor);
+                    inventory.OnItemClicked?.Invoke(thisItem, currentColor);
                     RecolorIcon();
                 });
             }
             
+            currentColor = purchasedColors != null ? purchasedColors[0] : 0;
+            RecolorIcon();
+            
             btn.onClick.RemoveAllListeners();
-            btn.onClick.AddListener(() => manager.OnItemClicked?.Invoke(thisItem, currentColor));
+            btn.onClick.AddListener(() => inventory.OnItemClicked?.Invoke(thisItem, currentColor));
         }
 
         private void RecolorIcon()

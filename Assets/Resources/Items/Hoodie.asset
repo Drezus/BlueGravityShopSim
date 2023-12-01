@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 188409920d0d54dc484fbc2f908f563b, type: 3}
-  m_Name: T-Shirt
+  m_Name: Hoodie
   m_EditorClassIdentifier: 
-  id: 0
-  title: T-Shirt
-  desc: Can't get any more basic than this.
+  id: 3
+  title: Hoodie
+  desc: More pockets than you could ask for
   category: 2
-  price: 10
-  icon: {fileID: 21300000, guid: 95aefb00ef63849bbba638d89ea918e8, type: 3}
+  price: 17
+  thumbnailIcon: {fileID: 21300000, guid: b721ed69577d84ff78b7f68fb0e552b3, type: 3}
+  fullBodyArt: {fileID: 0}
   colors:
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 1}
-  - {r: 0.8396226, g: 0.7819294, b: 0, a: 1}
-  - {r: 0.8962264, g: 0, b: 0, a: 1}
-  - {r: 0, g: 0.39823872, b: 0.8584906, a: 1}
-  - {r: 0.06695303, g: 0.6415094, b: 0, a: 1}
+  - {r: 0.8584906, g: 0.79680955, b: 0, a: 1}
+  - {r: 0.08388218, g: 0.6132076, b: 0.49639857, a: 1}
+  - {r: 0.6509434, g: 0.23170485, b: 0.21800464, a: 1}
+  - {r: 0, g: 0.350136, b: 0.8679245, a: 1}
+  - {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
   purchasedColors: 
   idleFrames:
   - direction: 0
