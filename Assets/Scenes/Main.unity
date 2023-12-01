@@ -1408,6 +1408,11 @@ MonoBehaviour:
     OnActionSelected:
       m_PersistentCalls:
         m_Calls: []
+  - interactionName: CLOSE MENUS
+    input: 27
+    OnActionSelected:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &1260848844
 Transform:
   m_ObjectHideFlags: 0
@@ -1765,6 +1770,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508281593}
   m_CullTransparentMesh: 1
+--- !u!1 &1743423316 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5080931061227651611, guid: b33b3d2cbb69d436e9e59c67c4b237fb, type: 3}
+  m_PrefabInstance: {fileID: 222288074}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1743423321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743423316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f3a10988f9c4c36882f3887dc11b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1 &1807700675
 GameObject:
   m_ObjectHideFlags: 0

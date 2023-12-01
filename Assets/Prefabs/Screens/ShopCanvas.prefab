@@ -339,6 +339,7 @@ GameObject:
   - component: {fileID: 1026353380505304468}
   - component: {fileID: 1026353380505304469}
   - component: {fileID: 1026353380505304465}
+  - component: {fileID: 2217860086211051111}
   m_Layer: 5
   m_Name: ShopCanvas
   m_TagString: Untagged
@@ -461,6 +462,19 @@ MonoBehaviour:
   noFundsColor: {r: 0.6698113, g: 0.33174616, b: 0.33174616, a: 1}
   soldOutColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
   buyBtnTxt: {fileID: 1026353381615936088}
+--- !u!114 &2217860086211051111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026353380505304554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f3a10988f9c4c36882f3887dc11b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1026353380505304554}
 --- !u!1 &1026353380733436973
 GameObject:
   m_ObjectHideFlags: 0

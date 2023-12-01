@@ -52,15 +52,15 @@ namespace Abstractions
                     "Couldn't find a Player-controlled DressableCharacter script. Make sure to mark one as IsPlayer.");
                 return;
             }
-            
-            itemNameLabel.text = string.Empty;
-            itemDescLabel.text = string.Empty;
         }
 
         protected virtual void OnEnable()
         {
             playerMov.canMove = false;
             UpdateEquippedArt();
+            
+            itemNameLabel.text = string.Empty;
+            itemDescLabel.text = string.Empty;
             
             OnItemClicked += SelectItem;
             OnItemClicked += SetFullBodyArt;
@@ -106,6 +106,9 @@ namespace Abstractions
         {
             selectedItem = null;
             selectedColor = 0;
+            
+            itemNameLabel.text = string.Empty;
+            itemDescLabel.text = string.Empty;
         }
 
         private void SetFullBodyArt(ClothingItem item, int colorID)
