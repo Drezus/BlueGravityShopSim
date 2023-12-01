@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6035989022350867082}
   - component: {fileID: 6035989022350867076}
-  - component: {fileID: 6035989022350867078}
+  - component: {fileID: 3614844515432707918}
   - component: {fileID: 6035989022350867079}
   - component: {fileID: 6035989022350867081}
   - component: {fileID: 6035989022350867083}
@@ -232,8 +232,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &6035989022350867078
-CapsuleCollider2D:
+--- !u!58 &3614844515432707918
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -245,9 +245,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.55}
-  m_Size: {x: 0.6, y: 1.1}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.35
 --- !u!114 &6035989022350867079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,8 +368,6 @@ MonoBehaviour:
   torsoRend: {fileID: 6035989021983013471}
   legsRend: {fileID: 6035989022962986314}
   animController: {fileID: 6035989022350867080}
-  inventoryScreen: {fileID: 0}
-  charMov: {fileID: 6035989022350867079}
 --- !u!114 &6035989022350867080
 MonoBehaviour:
   m_ObjectHideFlags: 0
