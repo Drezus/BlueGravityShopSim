@@ -1,11 +1,14 @@
 using System;
 using UnityEngine;
+using UnityEngine.Android;
 
 namespace Behaviours.Player
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class PlayerMovement : MonoBehaviour
+    public class CharacterMovement : MonoBehaviour
     {
+        public bool isPlayer;
+        
         private const string horAxis = "Horizontal";
         private const string verAxis = "Vertical";
         
@@ -18,8 +21,8 @@ namespace Behaviours.Player
         [SerializeField]
         private float speed = 5;
         
-        public float Horizontal => Input.GetAxis(horAxis); 
-        public float Vertical => Input.GetAxis(verAxis);
+        public float Horizontal => isPlayer ? Input.GetAxis(horAxis) : 0; 
+        public float Vertical => isPlayer ? Input.GetAxis(verAxis) : 0;
         public bool moving;
 
         private void Awake()
@@ -34,10 +37,17 @@ namespace Behaviours.Player
         
         private void FixedUpdate()
         {
-            Vector2 dir = new(Horizontal, Vertical);
+            if (isPlayer)
+            {
+                Vector2 dir = new(Horizontal, Vertical);
 
-            Vector2 pos = transform.position;
-            rbody.MovePosition(pos + dir * (Time.deltaTime * speed));
+                Vector2 pos = transform.position;
+                rbody.MovePosition(pos + dir * (Time.deltaTime * speed)); 
+            }
+            else
+            {
+                //TODO: Custom code for NPC walking.
+            }
         }
     }
 }

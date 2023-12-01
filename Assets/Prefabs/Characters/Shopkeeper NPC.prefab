@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1718616911304423126
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6035989021983013465, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022171625091, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867073, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_Name
+      value: Shopkeeper NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867073, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867076, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867079, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867082, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867082, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867082, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867082, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867082, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867082, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867082, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867082, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867082, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867082, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867082, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867086, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: coins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867086, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867086, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: torso.item
+      value: 
+      objectReference: {fileID: 11400000, guid: aef3ea19d83964677beb228b76d1363a, type: 2}
+    - target: {fileID: 6035989022350867086, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: torso.equippedColor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022398477353, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022690680539, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022962986309, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 82535343b983e427d816a06b198594d5, type: 3}
+--- !u!1 &4908330890731850839 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6035989022350867073, guid: 82535343b983e427d816a06b198594d5, type: 3}
+  m_PrefabInstance: {fileID: 1718616911304423126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8332502198046128512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4908330890731850839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd96942e51d34cd28d8f2f2ebb28e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  options:
+  - interactionName: Buy
+    input: 101
+    OnActionSelected:
+      m_PersistentCalls:
+        m_Calls: []
+  - interactionName: Sell
+    input: 114
+    OnActionSelected:
+      m_PersistentCalls:
+        m_Calls: []

@@ -3,9 +3,9 @@ using UnityEngine;
 namespace Behaviours.Player
 {
     [RequireComponent(typeof(Animator))]
-    public class PlayerAnimationController : MonoBehaviour
+    public class DressableCharacterAnimationController : MonoBehaviour
     {
-        public PlayerMovement playerMov;
+        public CharacterMovement characterMov;
         public Animator anim;
         
         [Header("Animation Parameter Labels")]
@@ -19,21 +19,21 @@ namespace Behaviours.Player
         // Update is called once per frame
         void Update()
         {
-            anim.SetFloat(horizontalLabel, playerMov.Horizontal);
-            anim.SetFloat(verticalLabel, playerMov.Vertical);
+            anim.SetFloat(horizontalLabel, characterMov.Horizontal);
+            anim.SetFloat(verticalLabel, characterMov.Vertical);
             
-            anim.SetBool(walkLabel, playerMov.moving);
+            anim.SetBool(walkLabel, characterMov.moving);
 
-            if (!playerMov.moving) return;
+            if (!characterMov.moving) return;
             
             //Sets a last direction value so the Idle animation can use it regardless of input states.
-            if (Mathf.Abs(playerMov.Horizontal) > Mathf.Abs(playerMov.Vertical))
+            if (Mathf.Abs(characterMov.Horizontal) > Mathf.Abs(characterMov.Vertical))
             {
-                lastDir = playerMov.Horizontal > 0 ? Directions.East : Directions.West;
+                lastDir = characterMov.Horizontal > 0 ? Directions.East : Directions.West;
             }
             else
             {
-                lastDir = playerMov.Vertical > 0 ? Directions.North : Directions.South;
+                lastDir = characterMov.Vertical > 0 ? Directions.North : Directions.South;
             }
             
             anim.SetFloat(directionLabel, (float)lastDir);

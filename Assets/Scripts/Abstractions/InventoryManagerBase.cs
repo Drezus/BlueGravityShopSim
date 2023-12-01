@@ -55,6 +55,16 @@ namespace Abstractions
             itemDescLabel.text = string.Empty;
         }
 
+        private void OnEnable()
+        {
+            Time.timeScale = 0;
+        }
+        
+        private void OnDisable()
+        {
+            Time.timeScale = 1;
+        }
+
         protected void SetupGrid(DressableCharacter dressableChar = null)
         {
             if(inventory == null) return;

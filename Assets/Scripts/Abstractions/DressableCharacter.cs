@@ -10,7 +10,7 @@ namespace Abstractions
     public class DressableCharacter : MonoBehaviour
     {
         public bool isPlayer;
-        public int coins;
+        public int money;
         public List<ClothingItem> Inventory
         {
             get;
@@ -30,11 +30,17 @@ namespace Abstractions
         [SerializeField]private SpriteRenderer legsRend;
 
         [Header("AnimationController Reference")]
-        [SerializeField] private PlayerAnimationController animController;
+        [SerializeField] private DressableCharacterAnimationController animController;
 
         private void Awake()
         {
             Inventory = new List<ClothingItem>();
+            
+            //Equips all clothes that are already assigned via inspector.
+            EquipClothing(hat.item, hat.equippedColor);
+            EquipClothing(face.item, face.equippedColor);
+            EquipClothing(torso.item, torso.equippedColor);
+            EquipClothing(legs.item, legs.equippedColor);
         }
 
         public void PurchaseClothing(ClothingItem item, int colorIndex)
@@ -51,7 +57,7 @@ namespace Abstractions
             if(!itemAlreadyBought.purchasedColors.Contains(colorIndex)) 
                 itemAlreadyBought.purchasedColors.Add(colorIndex);
 
-            coins -= item.price;
+            money -= item.price;
         
             //Equip instantly
             EquipClothing(item, colorIndex);
@@ -65,6 +71,8 @@ namespace Abstractions
     
         public void EquipClothing(ClothingItem item, int colorIndex)
         {
+            if(item == null) return;
+            
             //Equip instantly
             switch (item.category)
             {
@@ -114,7 +122,7 @@ namespace Abstractions
     
         public void SetAnimFrame(int frame)
         {
-            Animations anim = animController.playerMov.moving ? Animations.Walk : Animations.Idle; //In a more robust setting, this would be replaced with a proper state machine.
+            Animations anim = animController.characterMov.moving ? Animations.Walk : Animations.Idle; //In a more robust setting, this would be replaced with a proper state machine.
             Directions dir = animController.lastDir;
         
             SetClothingFrame(ClothingCategory.Hat, anim, dir, frame);

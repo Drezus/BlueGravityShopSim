@@ -40,9 +40,9 @@ namespace UI.Inventory
             }
             else
             {
-                buyBtn.interactable = dressableChar.coins >= item.price;
+                buyBtn.interactable = dressableChar.money >= item.price;
                 buyBtnTxt.text = $"BUY (${item.price})";
-                buyBtn.GetComponent<Image>().color = dressableChar.coins >= item.price ? buyableColor : noFundsColor;
+                buyBtn.GetComponent<Image>().color = dressableChar.money >= item.price ? buyableColor : noFundsColor;
             }
         }
 
