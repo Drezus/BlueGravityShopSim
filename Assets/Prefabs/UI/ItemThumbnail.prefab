@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 95aefb00ef63849bbba638d89ea918e8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5679a74364f6b4440ab7e7aed55cd95e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 2262370916783973119}
   - component: {fileID: 2262370916783973088}
   - component: {fileID: 1446809905782485594}
+  - component: {fileID: 1044355292526185930}
   m_Layer: 5
   m_Name: ItemThumbnail
   m_TagString: Untagged
@@ -199,6 +200,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1044355292526185930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2262370916783973090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 156aff9841b54eb2a34b267add5db96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemIcon: {fileID: 2262370915898983970}
+  itemButton: {fileID: 1446809905782485594}
+  colorButtonPrefab: {fileID: 1889002455745717944, guid: e6cbc9c87e353466aa6dccc0b81be9a5, type: 3}
+  colorButtonsParent: {fileID: 2262370916939678283}
 --- !u!1 &2262370916939678284
 GameObject:
   m_ObjectHideFlags: 0
