@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Behaviours.Player;
 using TMPro;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -10,7 +11,7 @@ using UnityEngine.Events;
 public class PlayerInteractionController : MonoBehaviour
 {
     [SerializeField]
-    private Transform player;
+    private CharacterMovement player;
 
     public float interactionRange = 2f;
 
@@ -22,6 +23,10 @@ public class PlayerInteractionController : MonoBehaviour
     private Transform promptPrefab;
     [SerializeField]
     private Transform promptParent;
+    
+    [Header("Player-related references")]
+    [SerializeField] private CharacterMovement charMov;
+    [SerializeField] private Transform inventoryScreen;
 
     private void Awake()
     {
@@ -38,7 +43,7 @@ public class PlayerInteractionController : MonoBehaviour
 
     private void Update()
     {
-        if(Time.timeScale <= 0) return;
+        if(!player.canMove) return;
         
         //Find nearest interactable target
         InteractableTarget nearest = targets.OrderBy(t => Vector2.Distance(player.transform.position, t.transform.position))
@@ -70,7 +75,7 @@ public class PlayerInteractionController : MonoBehaviour
             {
                 Transform opt = Instantiate(promptPrefab, promptParent);
                 TMP_Text optText = opt.GetComponentInChildren<TMP_Text>();
-                optText.text = $"{option.interactionName} [{option.input.ToString()}]";
+                optText.text = option.input != KeyCode.None ? $"{option.interactionName} [{option.input.ToString()}]" : $"{option.interactionName}" ;
                 availableActions.Add(option.input, option.OnActionSelected);
             }
             
@@ -82,6 +87,19 @@ public class PlayerInteractionController : MonoBehaviour
             if (Input.GetKeyDown(action.Key))
             {
                 action.Value?.Invoke();
+                promptParent.gameObject.SetActive(false);
+                availableActions = new Dictionary<KeyCode, UnityEvent>();
+            }
+        }
+        
+        if(charMov == null || !charMov.isPlayer) return;
+        if(inventoryScreen == null) return;
+        
+        if (Input.GetKeyDown(KeyCode.I) && charMov.canMove)
+        {
+            inventoryScreen.gameObject.SetActive(true);
+            if (promptParent.gameObject.activeSelf)
+            {
                 promptParent.gameObject.SetActive(false);
                 availableActions = new Dictionary<KeyCode, UnityEvent>();
             }

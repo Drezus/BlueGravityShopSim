@@ -8,6 +8,7 @@ namespace Behaviours.Player
     public class CharacterMovement : MonoBehaviour
     {
         public bool isPlayer;
+        public bool canMove = true;
         
         private const string horAxis = "Horizontal";
         private const string verAxis = "Vertical";
@@ -32,11 +33,13 @@ namespace Behaviours.Player
 
         private void Update()
         {
-            moving = Mathf.Abs(Horizontal) > 0 || Mathf.Abs(Vertical) > 0;
+            moving = canMove && (Mathf.Abs(Horizontal) > 0 || Mathf.Abs(Vertical) > 0);
         }
         
         private void FixedUpdate()
         {
+            if (!canMove) return;
+            
             if (isPlayer)
             {
                 Vector2 dir = new(Horizontal, Vertical);

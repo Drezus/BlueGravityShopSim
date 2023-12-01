@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 1
+  canMove: 1
   anim: {fileID: 6035989022350867083}
   speed: 5
   moving: 0
@@ -367,6 +368,8 @@ MonoBehaviour:
   torsoRend: {fileID: 6035989021983013471}
   legsRend: {fileID: 6035989022962986314}
   animController: {fileID: 6035989022350867080}
+  inventoryScreen: {fileID: 0}
+  charMov: {fileID: 6035989022350867079}
 --- !u!114 &6035989022350867080
 MonoBehaviour:
   m_ObjectHideFlags: 0

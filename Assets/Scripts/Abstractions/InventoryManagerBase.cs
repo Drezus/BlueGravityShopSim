@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Behaviours.Player;
 using ScriptableObjects.Clothing;
 using TMPro;
 using UI.Inventory;
@@ -12,12 +13,12 @@ namespace Abstractions
     public abstract class InventoryManagerBase : MonoBehaviour
     {
         protected DressableCharacter dressableChar;
+                
+        [SerializeField]
+        protected Transform grid;
         
         [SerializeField]
         protected ItemThumbnail thumbnailPrefab;
-        
-        [SerializeField]
-        protected Transform grid;
         
         [Header("Labels")]
         [SerializeField]
@@ -32,6 +33,9 @@ namespace Abstractions
         public Image legsLayer;
         
         protected List<ClothingItem> inventory;
+        
+        [Header("Reference to Player Movement")]
+        public CharacterMovement playerMov;
         
         public Action<ClothingItem, int> OnItemClicked { get; set; }
 
@@ -57,12 +61,12 @@ namespace Abstractions
 
         private void OnEnable()
         {
-            Time.timeScale = 0;
+            playerMov.canMove = false;
         }
-        
+
         private void OnDisable()
         {
-            Time.timeScale = 1;
+            playerMov.canMove = true;
         }
 
         protected void SetupGrid(DressableCharacter dressableChar = null)

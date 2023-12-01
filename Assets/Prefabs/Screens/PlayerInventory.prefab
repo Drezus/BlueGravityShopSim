@@ -192,14 +192,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f384303d6e694b7dbe1169d87ac555e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thumbnailPrefab: {fileID: 1044355292526185930, guid: ee520afa11b984b1b95a509ba086e18e, type: 3}
   grid: {fileID: 5080931061621983291}
+  thumbnailPrefab: {fileID: 1044355292526185930, guid: ee520afa11b984b1b95a509ba086e18e, type: 3}
   itemNameLabel: {fileID: 8258340307355362691}
   itemDescLabel: {fileID: 262843928029046957}
   hatLayer: {fileID: 6090532378599945491}
   faceLayer: {fileID: 8096901031191899212}
   torsoLayer: {fileID: 5080931061802026850}
   legsLayer: {fileID: 4864312132781593791}
+  playerMov: {fileID: 0}
   equipBtn: {fileID: 5080931060279474096}
   equippableColor: {r: 1, g: 1, b: 1, a: 1}
   equippedColor: {r: 0.5647059, g: 0.5647059, b: 0.5647059, a: 1}

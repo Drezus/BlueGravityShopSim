@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace UI.Inventory
 {
-    public class ShopManager : InventoryManagerBase
+    public class ShopBuyManager : InventoryManagerBase
     {
         [Header("Buy Button customizations")]
         public Button buyBtn;

@@ -80,6 +80,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6035989022350867086, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: charMov
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867086, guid: 82535343b983e427d816a06b198594d5, type: 3}
       propertyPath: isPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -123,12 +127,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   options:
-  - interactionName: Buy
+  - interactionName: BUY
     input: 101
     OnActionSelected:
       m_PersistentCalls:
         m_Calls: []
-  - interactionName: Sell
+  - interactionName: SELL
     input: 114
     OnActionSelected:
       m_PersistentCalls:

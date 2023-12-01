@@ -32,6 +32,8 @@ namespace Abstractions
         [Header("AnimationController Reference")]
         [SerializeField] private DressableCharacterAnimationController animController;
 
+        public Action<int> OnMoneyChanged;
+        
         private void Awake()
         {
             Inventory = new List<ClothingItem>();
@@ -57,18 +59,30 @@ namespace Abstractions
             if(!itemAlreadyBought.purchasedColors.Contains(colorIndex)) 
                 itemAlreadyBought.purchasedColors.Add(colorIndex);
 
+            OnMoneyChanged?.Invoke(-item.price);
             money -= item.price;
         
             //Equip instantly
             EquipClothing(item, colorIndex);
         }
-    
+        
         public bool IsItemAlreadyPurchased(ClothingItem item, int colorIndex)
         {
             ClothingItem itemAlreadyBought = Inventory.FirstOrDefault(i => i.id == item.id);
             return itemAlreadyBought != null && itemAlreadyBought.purchasedColors.Contains(colorIndex);
         }
-    
+
+        public void SellClothing(ClothingItem item, int colorIndex)
+        {
+            
+        }
+
+        public void EarnMoney(int val)
+        {
+            OnMoneyChanged?.Invoke(val);
+            money += val;
+        }
+        
         public void EquipClothing(ClothingItem item, int colorIndex)
         {
             if(item == null) return;
