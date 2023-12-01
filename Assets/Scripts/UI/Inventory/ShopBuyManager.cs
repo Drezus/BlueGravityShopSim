@@ -15,14 +15,14 @@ namespace UI.Inventory
         public Color buyableColor, noFundsColor, soldOutColor;
         public TMP_Text buyBtnTxt;
 
-        protected override void Awake()
+        protected override void OnEnable()
         {
-            base.Awake();
+            base.OnEnable();
             inventory = Resources.LoadAll<ClothingItem>("Items").ToList();
             SetupGrid();
             buyBtn.gameObject.SetActive(false);
         }
-
+        
         protected override void SelectItem(ClothingItem item, int colorID)
         {
             if(!buyBtn.gameObject.activeSelf) buyBtn.gameObject.SetActive(true);

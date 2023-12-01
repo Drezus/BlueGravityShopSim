@@ -75,7 +75,70 @@ namespace Abstractions
 
         public void SellClothing(ClothingItem item, int colorIndex)
         {
+            if (item == null) return;
+        
+            ClothingItem sellingItem = Inventory.FirstOrDefault(i => i.id == item.id);
+            if (sellingItem == null)
+            {
+                Debug.Log("Attempting to sell an item that doesn't belong to the player. This should never happen.");
+                return;
+            }
+
+            if (!sellingItem.purchasedColors.Contains(colorIndex))
+            {
+                Debug.Log("Attempting to sell an item color that doesn't belong to the player. This should never happen.");
+                return;
+            } 
             
+            sellingItem.purchasedColors.Remove(colorIndex);
+            
+            if (sellingItem.purchasedColors.Count <= 0)
+            {
+                Inventory.Remove(sellingItem);
+                
+                //Unequips entire clothing if equipped
+                switch (sellingItem.category)
+                {
+                    case ClothingCategory.Hat:
+                        if(hat.item == sellingItem) UnequipClothing(ClothingCategory.Hat);
+                        break;
+                    case ClothingCategory.Face:
+                        if(face.item == sellingItem) UnequipClothing(ClothingCategory.Face);
+                        break;
+                    case ClothingCategory.Torso:
+                        if(torso.item == sellingItem) UnequipClothing(ClothingCategory.Torso);
+                        break;
+                    case ClothingCategory.Legs:
+                        if(legs.item == sellingItem) UnequipClothing(ClothingCategory.Legs);
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException(nameof(item.category), item.category, "Invalid item category.");
+                }
+            }
+            else
+            {
+                //Only unequips the color
+                switch (sellingItem.category)
+                {
+                    case ClothingCategory.Hat:
+                        if(hat.equippedColor == colorIndex) SetColor(ClothingCategory.Hat, sellingItem.purchasedColors[0]);
+                        break;
+                    case ClothingCategory.Face:
+                        if(face.equippedColor == colorIndex) SetColor(ClothingCategory.Face, sellingItem.purchasedColors[0]);
+                        break;
+                    case ClothingCategory.Torso:
+                        if(torso.equippedColor == colorIndex) SetColor(ClothingCategory.Torso, sellingItem.purchasedColors[0]);
+                        break;
+                    case ClothingCategory.Legs:
+                        if(legs.equippedColor == colorIndex) SetColor(ClothingCategory.Legs, sellingItem.purchasedColors[0]);
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException(nameof(item.category), item.category, "Invalid item category.");
+                }
+            }
+
+            OnMoneyChanged?.Invoke(item.resellPrice);
+            money += item.resellPrice;
         }
 
         public void EarnMoney(int val)
@@ -108,6 +171,27 @@ namespace Abstractions
             }
         
             SetColor(item.category, colorIndex);
+        }
+
+        private void UnequipClothing(ClothingCategory category)
+        {
+            switch (category)
+            {
+                case ClothingCategory.Hat:
+                    hat.item = null;
+                    break;
+                case ClothingCategory.Face:
+                    face.item  = null;
+                    break;
+                case ClothingCategory.Torso:
+                    torso.item  = null;
+                    break;
+                case ClothingCategory.Legs:
+                    legs.item  = null;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(category), category, "Invalid item category.");
+            }
         }
     
         private void SetColor(ClothingCategory cat, int colorIndex)
@@ -172,9 +256,11 @@ namespace Abstractions
                 default:
                     throw new ArgumentOutOfRangeException(nameof(category), category, "Invalid clothing slot.");
             }
-        
-            if(rend == null || item == null) return;
 
+            if (rend == null) return;
+            rend.gameObject.SetActive(item != null);
+            
+            if(item == null) return;
             rend.sprite = anim switch
             {
                 Animations.Idle => item.idleFrames[(int)dir].frames[frame],

@@ -42,7 +42,7 @@ namespace Abstractions
         protected ClothingItem selectedItem = null;
         protected int selectedColor = 0;
 
-        protected virtual void Awake()
+        protected void Awake()
         {
             dressableChar = FindObjectsOfType<DressableCharacter>().FirstOrDefault(d => d.isPlayer);
 
@@ -53,47 +53,60 @@ namespace Abstractions
                 return;
             }
             
-            ShowEquippedItems();
-
             itemNameLabel.text = string.Empty;
             itemDescLabel.text = string.Empty;
         }
 
-        private void OnEnable()
+        protected virtual void OnEnable()
         {
             playerMov.canMove = false;
-        }
-
-        private void OnDisable()
-        {
-            playerMov.canMove = true;
+            UpdateEquippedArt();
+            
+            OnItemClicked += SelectItem;
+            OnItemClicked += SetFullBodyArt;
+            OnItemClicked += SetText;
         }
 
         protected void SetupGrid(DressableCharacter dressableChar = null)
         {
             if(inventory == null) return;
+
+            if (grid.childCount > 0)
+            {
+                foreach (Transform t in grid.GetComponentsInChildren<Transform>())
+                {
+                    if (t == grid) continue;
+                    Destroy(t.gameObject);
+                }    
+            }
             
             inventory = inventory.OrderBy(i => i.id).ToList();
+            
+            if(inventory.Count <= 0) return;
             
             foreach (ClothingItem item in inventory)
             {
                 ItemThumbnail thumb = Instantiate(thumbnailPrefab, grid);
                 thumb.Setup(item, this, dressableChar != null ? item.purchasedColors : null);
             }
-
-            OnItemClicked += SelectItem;
-            OnItemClicked += SetFullBodyArt;
-            OnItemClicked += SetText;
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
+            playerMov.canMove = true;
+            
             OnItemClicked -= SelectItem;
             OnItemClicked -= SetFullBodyArt;
             OnItemClicked -= SetText;
         }
 
         protected abstract void SelectItem(ClothingItem item, int colorID);
+        
+        protected void UnselectItem()
+        {
+            selectedItem = null;
+            selectedColor = 0;
+        }
 
         private void SetFullBodyArt(ClothingItem item, int colorID)
         {
@@ -120,12 +133,19 @@ namespace Abstractions
             itemDescLabel.text = item.desc;
         }
 
-        private void ShowEquippedItems()
+        protected void UpdateEquippedArt()
         {
-            SetFullBodyArt(dressableChar.hat.item, dressableChar.hat.equippedColor);
-            SetFullBodyArt(dressableChar.face.item, dressableChar.face.equippedColor);
-            SetFullBodyArt(dressableChar.torso.item, dressableChar.torso.equippedColor);
-            SetFullBodyArt(dressableChar.legs.item, dressableChar.legs.equippedColor);
+            if (dressableChar.hat.item != null) SetFullBodyArt(dressableChar.hat.item, dressableChar.hat.equippedColor);
+            else hatLayer.gameObject.SetActive(false);
+
+            if (dressableChar.face.item != null) SetFullBodyArt(dressableChar.face.item, dressableChar.face.equippedColor);
+            else faceLayer.gameObject.SetActive(false);
+            
+            if (dressableChar.torso.item != null) SetFullBodyArt(dressableChar.torso.item, dressableChar.torso.equippedColor);
+            else torsoLayer.gameObject.SetActive(false);
+            
+            if (dressableChar.legs.item != null) SetFullBodyArt(dressableChar.legs.item, dressableChar.legs.equippedColor);
+            else legsLayer.gameObject.SetActive(false);
         }
     }
 }

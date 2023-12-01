@@ -17,6 +17,7 @@ MonoBehaviour:
   desc: Show off those biceps
   category: 2
   price: 8
+  resellPrice: 1
   thumbnailIcon: {fileID: 21300000, guid: b8323819d12724a398aed0d78a9e6f28, type: 3}
   fullBodyArt: {fileID: 0}
   colors:

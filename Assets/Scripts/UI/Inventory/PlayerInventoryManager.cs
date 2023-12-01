@@ -16,9 +16,9 @@ namespace UI.Inventory
         public Button equipBtn;
         public Color equippableColor, equippedColor;
 
-        protected override void Awake()
+        protected override void OnEnable()
         {
-            base.Awake();
+            base.OnEnable();
             if(dressableChar == null) return;
             
             inventory = dressableChar.Inventory;

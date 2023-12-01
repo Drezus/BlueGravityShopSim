@@ -56,45 +56,47 @@ public class PlayerInteractionController : MonoBehaviour
                 promptParent.gameObject.SetActive(false);
                 availableActions = new Dictionary<KeyCode, UnityEvent>();
             }
-            return;
         }
-        
-        //Draw prompts
-        if (!promptParent.gameObject.activeSelf)
+        else
         {
-            if (promptParent.childCount > 0)
+            //Draw prompts
+            if (!promptParent.gameObject.activeSelf)
             {
-                foreach (Transform t in promptParent.transform.GetComponentsInChildren<Transform>())
+                if (promptParent.childCount > 0)
                 {
-                    if (t == promptParent) continue;
-                    Destroy(t.gameObject);
-                }    
-            }
+                    foreach (Transform t in promptParent.transform.GetComponentsInChildren<Transform>())
+                    {
+                        if (t == promptParent) continue;
+                        Destroy(t.gameObject);
+                    }    
+                }
         
-            foreach (InteractionOptions option in nearest.options)
-            {
-                Transform opt = Instantiate(promptPrefab, promptParent);
-                TMP_Text optText = opt.GetComponentInChildren<TMP_Text>();
-                optText.text = option.input != KeyCode.None ? $"{option.interactionName} [{option.input.ToString()}]" : $"{option.interactionName}" ;
-                availableActions.Add(option.input, option.OnActionSelected);
-            }
+                foreach (InteractionOptions option in nearest.options)
+                {
+                    Transform opt = Instantiate(promptPrefab, promptParent);
+                    TMP_Text optText = opt.GetComponentInChildren<TMP_Text>();
+                    optText.text = option.input != KeyCode.None ? $"{option.interactionName} [{option.input.ToString()}]" : $"{option.interactionName}" ;
+                    availableActions.Add(option.input, option.OnActionSelected);
+                }
             
-            promptParent.gameObject.SetActive(true);
-        }
-
-        foreach (KeyValuePair<KeyCode, UnityEvent> action in availableActions)
-        {
-            if (Input.GetKeyDown(action.Key))
-            {
-                action.Value?.Invoke();
-                promptParent.gameObject.SetActive(false);
-                availableActions = new Dictionary<KeyCode, UnityEvent>();
+                promptParent.gameObject.SetActive(true);
             }
+
+            foreach (KeyValuePair<KeyCode, UnityEvent> action in availableActions)
+            {
+                if (Input.GetKeyDown(action.Key))
+                {
+                    action.Value?.Invoke();
+                    promptParent.gameObject.SetActive(false);
+                    availableActions = new Dictionary<KeyCode, UnityEvent>();
+                }
+            } 
         }
         
         if(charMov == null || !charMov.isPlayer) return;
         if(inventoryScreen == null) return;
         
+        //Opens inventory anywhere as long as no other screen is opened.
         if (Input.GetKeyDown(KeyCode.I) && charMov.canMove)
         {
             inventoryScreen.gameObject.SetActive(true);
