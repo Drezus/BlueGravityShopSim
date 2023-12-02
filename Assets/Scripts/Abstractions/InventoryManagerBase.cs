@@ -13,6 +13,7 @@ namespace Abstractions
     public abstract class InventoryManagerBase : MonoBehaviour
     {
         protected DressableCharacter dressableChar;
+        public bool isPlayerInventory;
                 
         [SerializeField]
         protected Transform grid;
@@ -67,7 +68,19 @@ namespace Abstractions
             OnItemClicked += SetText;
         }
 
-        protected void SetupGrid(DressableCharacter dressableChar = null)
+        public void FilterItems(int filterID)
+        {
+            UnselectItem();
+            SetupGrid((ClothingCategory)filterID);
+        }
+        
+        public void ShowAllItems()
+        {
+            UnselectItem();
+            SetupGrid();
+        }
+
+        protected void SetupGrid(ClothingCategory? filter = null)
         {
             if(inventory == null) return;
 
@@ -80,14 +93,14 @@ namespace Abstractions
                 }    
             }
             
-            inventory = inventory.OrderBy(i => i.id).ToList();
+            List<ClothingItem> filteredItems = filter != null ? inventory.Where(i => i.category == filter).OrderBy(i => i.id).ToList(): inventory.OrderBy(i => i.id).ToList();
             
-            if(inventory.Count <= 0) return;
+            if(filteredItems.Count <= 0) return;
             
-            foreach (ClothingItem item in inventory)
+            foreach (ClothingItem item in filteredItems)
             {
                 ItemThumbnail thumb = Instantiate(thumbnailPrefab, grid);
-                thumb.Setup(item, this, dressableChar != null ? item.purchasedColors : null);
+                thumb.Setup(item, this, isPlayerInventory ? item.purchasedColors : null);
             }
         }
 

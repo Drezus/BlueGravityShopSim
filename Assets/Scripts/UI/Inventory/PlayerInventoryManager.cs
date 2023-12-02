@@ -22,7 +22,7 @@ namespace UI.Inventory
             if(dressableChar == null) return;
             
             inventory = dressableChar.Inventory;
-            SetupGrid(dressableChar);
+            SetupGrid(null);
             equipBtn.gameObject.SetActive(false);
         }
 

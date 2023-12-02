@@ -19,7 +19,7 @@ namespace UI.Inventory
         {
             base.OnEnable();
             inventory = dressableChar.Inventory;
-            SetupGrid(dressableChar);
+            SetupGrid(null);
             sellBtn.gameObject.SetActive(false);
         }
 
@@ -40,7 +40,7 @@ namespace UI.Inventory
             sellBtn.gameObject.SetActive(false);
             
             inventory = dressableChar.Inventory;
-            SetupGrid(dressableChar);
+            SetupGrid(null);
             UpdateEquippedArt();
         }
     }
