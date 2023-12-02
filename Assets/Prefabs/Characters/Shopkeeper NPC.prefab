@@ -45,11 +45,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6035989022350867082, guid: 82535343b983e427d816a06b198594d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.82
       objectReference: {fileID: 0}
     - target: {fileID: 6035989022350867082, guid: 82535343b983e427d816a06b198594d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.52
       objectReference: {fileID: 0}
     - target: {fileID: 6035989022350867082, guid: 82535343b983e427d816a06b198594d5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -92,16 +92,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6035989022350867086, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: hat.item
+      value: 
+      objectReference: {fileID: 11400000, guid: 28bddddd0591e4466a3a9c81215bf7dc, type: 2}
+    - target: {fileID: 6035989022350867086, guid: 82535343b983e427d816a06b198594d5, type: 3}
       propertyPath: isPlayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867086, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: legs.item
+      value: 
+      objectReference: {fileID: 11400000, guid: 82bb11a84132b4808be6b1e246cb9563, type: 2}
     - target: {fileID: 6035989022350867086, guid: 82535343b983e427d816a06b198594d5, type: 3}
       propertyPath: torso.item
       value: 
       objectReference: {fileID: 11400000, guid: aef3ea19d83964677beb228b76d1363a, type: 2}
     - target: {fileID: 6035989022350867086, guid: 82535343b983e427d816a06b198594d5, type: 3}
-      propertyPath: torso.equippedColor
+      propertyPath: hat.equippedColor
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867086, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: legs.equippedColor
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035989022350867086, guid: 82535343b983e427d816a06b198594d5, type: 3}
+      propertyPath: torso.equippedColor
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6035989022398477353, guid: 82535343b983e427d816a06b198594d5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -151,9 +167,33 @@ MonoBehaviour:
     input: 101
     OnActionSelected:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   - interactionName: SELL
     input: 114
     OnActionSelected:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2

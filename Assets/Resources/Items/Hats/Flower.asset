@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188409920d0d54dc484fbc2f908f563b, type: 3}
+  m_Name: Flower
+  m_EditorClassIdentifier: 
+  id: 10
+  title: Flower
+  desc: Not really a hat, but pretty nonethless
+  category: 0
+  price: 3
+  resellPrice: 1
+  thumbnailIcon: {fileID: 21300000, guid: 829e404af0f7a460bb5b53f0005ba790, type: 3}
+  fullBodyArt: {fileID: 21300000, guid: efd14d9ca79d043e183057aabf8c0ccc, type: 3}
+  colors:
+  - {r: 0.9056604, g: 0.80740476, b: 0.80740476, a: 1}
+  - {r: 1, g: 0.5990566, b: 0.97811604, a: 1}
+  - {r: 0.55602527, g: 0.8462312, b: 0.990566, a: 1}
+  - {r: 0.61132056, g: 0.5061855, b: 0.8584906, a: 1}
+  - {r: 0.9433962, g: 0.23584905, b: 0.2502979, a: 1}
+  - {r: 1, g: 0.8327259, b: 0.25943398, a: 1}
+  - {r: 0.29131702, g: 0.21626917, b: 0.5660378, a: 1}
+  purchasedColors: 
+  idleFrames:
+  - direction: 0
+    frames:
+    - {fileID: -567486160, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+    - {fileID: 79723032, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: -751503281, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+    - {fileID: 1012765192, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: -1290663854, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+    - {fileID: -80321242, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: -519686302, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+    - {fileID: -1584946716, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+  walkFrames:
+  - direction: 0
+    frames:
+    - {fileID: -567486160, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+    - {fileID: -1317697536, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+    - {fileID: -695758458, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: -751503281, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+    - {fileID: -160849122, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+    - {fileID: 954388350, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: -1290663854, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+    - {fileID: -1532807489, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+    - {fileID: 1987088574, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: -519686302, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+    - {fileID: 751345182, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}
+    - {fileID: 409046817, guid: 2ccb9217fff6a4cbdad069a7695bf57d, type: 3}

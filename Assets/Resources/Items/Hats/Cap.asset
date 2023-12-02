@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188409920d0d54dc484fbc2f908f563b, type: 3}
+  m_Name: Cap
+  m_EditorClassIdentifier: 
+  id: 8
+  title: Cap
+  desc: Protects your eyes or your nape, depending on how you wear it
+  category: 0
+  price: 20
+  resellPrice: 8
+  thumbnailIcon: {fileID: 21300000, guid: 4293d680bfb4940c69e22d193430763d, type: 3}
+  fullBodyArt: {fileID: 21300000, guid: 234aa68de67b1456e8be037ee26ebf99, type: 3}
+  colors:
+  - {r: 0.8207547, g: 0, b: 0.06416491, a: 1}
+  - {r: 0, g: 0.8113208, b: 0.063211896, a: 1}
+  - {r: 1, g: 0.90592515, b: 0, a: 1}
+  - {r: 0.46537778, g: 0.20745817, b: 0.6981132, a: 1}
+  purchasedColors: 
+  idleFrames:
+  - direction: 0
+    frames:
+    - {fileID: -1815692648, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+    - {fileID: -2003191903, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: 166686624, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+    - {fileID: -2006293948, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: -1146194326, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+    - {fileID: 317566013, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: -1212264236, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+    - {fileID: -543155154, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+  walkFrames:
+  - direction: 0
+    frames:
+    - {fileID: -1815692648, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+    - {fileID: 1844544516, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+    - {fileID: -763185752, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: 166686624, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+    - {fileID: 30563215, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+    - {fileID: 1353135189, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: -1146194326, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+    - {fileID: 918187275, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+    - {fileID: -179444771, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: -1212264236, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+    - {fileID: -939142847, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}
+    - {fileID: 1016176470, guid: 8d9105b769c504712a61641a04bb4bea, type: 3}

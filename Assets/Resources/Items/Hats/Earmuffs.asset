@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188409920d0d54dc484fbc2f908f563b, type: 3}
+  m_Name: Earmuffs
+  m_EditorClassIdentifier: 
+  id: 11
+  title: Earmuffs
+  desc: Toasty and cozy ears all winter long
+  category: 0
+  price: 35
+  resellPrice: 12
+  thumbnailIcon: {fileID: 21300000, guid: c22c508ed8fd5467aa6dd4ff7c60eca2, type: 3}
+  fullBodyArt: {fileID: 21300000, guid: 71db66d25df7d46a7836fd992d5ad693, type: 3}
+  colors:
+  - {r: 0.5566038, g: 0.34919012, b: 0.36506864, a: 1}
+  - {r: 0.56510323, g: 0.7830189, b: 0.58194697, a: 1}
+  - {r: 0.44013548, g: 0.28146136, b: 0.5188679, a: 1}
+  - {r: 0.5, g: 0.2004717, b: 0.34935433, a: 1}
+  - {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+  - {r: 0.68516374, g: 0.83643365, b: 0.8396226, a: 1}
+  purchasedColors: 
+  idleFrames:
+  - direction: 0
+    frames:
+    - {fileID: 656577422, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+    - {fileID: 969162847, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: -1023955955, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+    - {fileID: 1832665751, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: 2111936730, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+    - {fileID: 1171627813, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: -374822297, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+    - {fileID: 1968620496, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+  walkFrames:
+  - direction: 0
+    frames:
+    - {fileID: 656577422, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+    - {fileID: 1488145405, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+    - {fileID: 1617483328, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: -1023955955, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+    - {fileID: -1007176839, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+    - {fileID: -2056514573, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: 2111936730, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+    - {fileID: 95729980, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+    - {fileID: 363583907, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: -374822297, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+    - {fileID: -1600467653, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
+    - {fileID: 1345712427, guid: 466fe83cbb64d44e2806a61fc7a0cc26, type: 3}
