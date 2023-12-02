@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188409920d0d54dc484fbc2f908f563b, type: 3}
+  m_Name: Skirt
+  m_EditorClassIdentifier: 
+  id: 7
+  title: Skirt
+  desc: Lets your kneecaps breathe
+  category: 3
+  price: 18
+  resellPrice: 4
+  thumbnailIcon: {fileID: 21300000, guid: abec86a779fb44bb0b480697e01d8190, type: 3}
+  fullBodyArt: {fileID: 21300000, guid: 954840b07b8c3413da15962a2315f325, type: 3}
+  colors:
+  - {r: 0.8396226, g: 0.35248306, b: 0.66267884, a: 1}
+  - {r: 1, g: 0.8196107, b: 0.5235849, a: 1}
+  - {r: 0.21893913, g: 0.22367002, b: 0.2264151, a: 1}
+  - {r: 0.4056604, g: 0.12055002, b: 0.17792293, a: 1}
+  - {r: 0.8396226, g: 0.16237983, b: 0.17191833, a: 1}
+  - {r: 0.41972235, g: 0.6792453, b: 0.6141203, a: 1}
+  - {r: 0.4554411, g: 0.39417946, b: 0.8113208, a: 1}
+  purchasedColors: 
+  idleFrames:
+  - direction: 0
+    frames:
+    - {fileID: -621888603, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+    - {fileID: 1960619115, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: -1908905729, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+    - {fileID: 885160394, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: 1251225443, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+    - {fileID: -129928500, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: -1454860713, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+    - {fileID: -120131164, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+  walkFrames:
+  - direction: 0
+    frames:
+    - {fileID: -621888603, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+    - {fileID: -1519403512, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+    - {fileID: 434336669, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: -1908905729, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+    - {fileID: -837524241, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+    - {fileID: -631942130, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: 1251225443, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+    - {fileID: -314703033, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+    - {fileID: -1682513741, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: -1454860713, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+    - {fileID: 1043823001, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}
+    - {fileID: 1293333612, guid: 4fda577b3153b40f6a23f324d99e7b7c, type: 3}

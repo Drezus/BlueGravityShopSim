@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188409920d0d54dc484fbc2f908f563b, type: 3}
+  m_Name: Shorts
+  m_EditorClassIdentifier: 
+  id: 6
+  title: Shorts
+  desc: Comfy and easy to wear
+  category: 3
+  price: 9
+  resellPrice: 1
+  thumbnailIcon: {fileID: 21300000, guid: 7f827070fcb1642c7bdeb6892637ae3c, type: 3}
+  fullBodyArt: {fileID: 21300000, guid: fd84631b1c08d4d4fa52eedab33c1a5c, type: 3}
+  colors:
+  - {r: 0.6415094, g: 0.41229767, b: 0, a: 1}
+  - {r: 0.8396226, g: 0.7623118, b: 0.2891153, a: 1}
+  - {r: 0.08597367, g: 0.3016215, b: 0.7924528, a: 1}
+  purchasedColors: 
+  idleFrames:
+  - direction: 0
+    frames:
+    - {fileID: 1726409062, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+    - {fileID: 916080433, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: -338334467, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+    - {fileID: -1593903127, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: 928490183, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+    - {fileID: 1489854201, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: -1501405804, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+    - {fileID: 1852138447, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+  walkFrames:
+  - direction: 0
+    frames:
+    - {fileID: 1726409062, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+    - {fileID: -555082598, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+    - {fileID: -627340910, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: -338334467, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+    - {fileID: -2029680184, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+    - {fileID: 957009492, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: 928490183, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+    - {fileID: 601923182, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+    - {fileID: 1651188670, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: -1501405804, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+    - {fileID: -1604824044, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
+    - {fileID: 1285210358, guid: afb0e57e762a840169af33c600bd3ce5, type: 3}
