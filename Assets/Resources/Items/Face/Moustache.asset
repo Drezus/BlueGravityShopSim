@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188409920d0d54dc484fbc2f908f563b, type: 3}
+  m_Name: Moustache
+  m_EditorClassIdentifier: 
+  id: 13
+  title: Moustache
+  desc: Instantly more respectable
+  category: 1
+  price: 12
+  resellPrice: 2
+  thumbnailIcon: {fileID: 21300000, guid: fb7d07fb1c5c94212a8578102d349a17, type: 3}
+  fullBodyArt: {fileID: 21300000, guid: ba5d83ff80ec64661b9f43ec3a77957b, type: 3}
+  colors:
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0.3207547, g: 0.18912423, b: 0.18912423, a: 1}
+  - {r: 0.9150943, g: 0.7241468, b: 0.030215396, a: 1}
+  - {r: 0.6320754, g: 0.26854718, b: 0.03875936, a: 1}
+  - {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
+  purchasedColors: 
+  idleFrames:
+  - direction: 0
+    frames:
+    - {fileID: -1386399801, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+    - {fileID: -1470616567, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: -1125261557, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+    - {fileID: -416547403, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: 566642505, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+    - {fileID: 1597032862, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: -1937162064, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+    - {fileID: 1902800394, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+  walkFrames:
+  - direction: 0
+    frames:
+    - {fileID: -1386399801, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+    - {fileID: -1895099289, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+    - {fileID: -168949484, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: -1125261557, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+    - {fileID: 325868822, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+    - {fileID: -339223628, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: 566642505, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+    - {fileID: -1396048208, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+    - {fileID: -1726021318, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: -1937162064, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+    - {fileID: -450548131, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}
+    - {fileID: 281643788, guid: fe4e9a64d190049b898abf166b3583ba, type: 3}

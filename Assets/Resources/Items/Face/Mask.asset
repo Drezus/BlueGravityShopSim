@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188409920d0d54dc484fbc2f908f563b, type: 3}
+  m_Name: Mask
+  m_EditorClassIdentifier: 
+  id: 14
+  title: Mask
+  desc: Wash your hands and keep distance
+  category: 1
+  price: 8
+  resellPrice: 1
+  thumbnailIcon: {fileID: 21300000, guid: cda27ce05b4ff4a2d9dcd6470d57ca32, type: 3}
+  fullBodyArt: {fileID: 21300000, guid: 928b6708fc62b493d865c88cfbaedc27, type: 3}
+  colors:
+  - {r: 0.623309, g: 0.8163959, b: 0.8207547, a: 1}
+  - {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
+  - {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
+  - {r: 0.8952013, g: 0.7467515, b: 0.9150943, a: 1}
+  purchasedColors: 
+  idleFrames:
+  - direction: 0
+    frames:
+    - {fileID: -945797501, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+    - {fileID: 1156594298, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: -1018621825, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+    - {fileID: 2102486041, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: 519095980, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+    - {fileID: 184948083, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: -712480906, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+    - {fileID: -1377654305, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+  walkFrames:
+  - direction: 0
+    frames:
+    - {fileID: -945797501, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+    - {fileID: 1408893343, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+    - {fileID: -714375704, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+  - direction: 1
+    frames:
+    - {fileID: -1018621825, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+    - {fileID: -1231729682, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+    - {fileID: -538908493, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+  - direction: 2
+    frames:
+    - {fileID: 519095980, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+    - {fileID: -1536614278, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+    - {fileID: 2139758613, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+  - direction: 3
+    frames:
+    - {fileID: -712480906, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+    - {fileID: 273184678, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
+    - {fileID: 496049683, guid: fef042e1fdda0452ca8c1c3e7dcb51cd, type: 3}
